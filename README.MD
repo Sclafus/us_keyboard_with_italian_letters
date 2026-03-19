@@ -8,36 +8,39 @@ L'alternativa che viene solitamente proposta è il layout Americano internaziona
 
 Le motivazioni per cui penso sia superiore per la scrittura in lingua italiana sono:
 - Assenza di "dead-keys", che rallentano pesantemente la scrittura
-- Tutte le lettere accentate sono nel terzo livello (alt destro).
+- Tutte le lettere accentate sono nel terzo livello (alt destro su Windows/Linux, Option su macOS).
 
-Per fare le lettere accentate, basterá fare ALT destro + lettera. ALT destro viene anche chiamato ALT GR.
+Per fare le lettere accentate, basterá fare ALT destro + lettera (su Windows/Linux) oppure Option (⌥) + lettera (su macOS).
 
 # Ma quindi come si fanno le accentate non ho capito bro
-| Combinazione | Risultato |
-| ------------ | --------- |
-| ALTGR + a | à |
-| ALTGR + e | è |
-| ALTGR + i | ì |
-| ALTGR + o | ò |
-| ALTGR + u | ù |
-| ALTGR + z | á |
-| ALTGR + d | é |
-| ALTGR + k | í |
-| ALTGR + l | ó |
-| ALTGR + j | ú |
 
-Quindi, banalmente, ALTGR + vocale fa la lettera con l'accento grave, mentre premere la lettera esattamente sotto ne fa la versione con l'accento acuto.
+Su **Windows/Linux** si usa ALTGR, su **macOS** si usa Option (⌥). Il funzionamento è identico:
+
+| Combinazione (Windows/Linux) | Combinazione (macOS) | Risultato |
+| ---------------------------- | -------------------- | --------- |
+| ALTGR + a | Option + a | à |
+| ALTGR + e | Option + e | è |
+| ALTGR + i | Option + i | ì |
+| ALTGR + o | Option + o | ò |
+| ALTGR + u | Option + u | ù |
+| ALTGR + z | Option + z | á |
+| ALTGR + d | Option + d | é |
+| ALTGR + k | Option + k | í |
+| ALTGR + l | Option + l | ó |
+| ALTGR + j | Option + j | ú |
+
+Quindi, banalmente, ALTGR/Option + vocale fa la lettera con l'accento grave, mentre premere la lettera esattamente sotto ne fa la versione con l'accento acuto.
 
 ## Ok ma se voglio fare l'accentata maiuscola cosa devo fare scusa
 Esattamente la stessa combinazione fatta qui sopra, ma tenendo premuto SHIFT oppure inserendo CAPS LOCK.
 
 ## Ok bro penso di aver capito ma se ALTGR + e fa è io come lo faccio l'euro €
-Niente paura bro, ALT+5 fa €
+Niente paura bro, ALTGR+5 (o Option+5 su macOS) fa €
 
 Se avete altri dubbi, c'è questa immagine epica con tutti i keymap
 ![Keymaps](https://i.imgur.com/jJ0HwuL.png)
 
-# Installazione
+# Installazione su Windows
 1. Scaricate [l'ultima release](https://github.com/Sclafus/us_keyboard_with_italian_letters/releases/latest)
 2. Decomprimete l'archivio ed eseguite `setup.exe`
 3. Aprite le impostazioni di Windows, andate su Data/Ora e Lingua > Lingua
@@ -45,8 +48,22 @@ Se avete altri dubbi, c'è questa immagine epica con tutti i keymap
 5. Nella sezione Tastiere, premete "Aggiungi tastiera" e selezionate `Italiano (US Keyboard with Italian Letters)`
 6. Eliminate la vecchia tastiera, cliccandoci sopra e poi premendo Rimuovi
 
+# Installazione su macOS
+1. Scaricate il file `Italian (US keyboard with Italian Letters).keylayout` dalla repository (oppure [dall'ultima release](https://github.com/Sclafus/us_keyboard_with_italian_letters/releases/latest))
+2. Copiate il file nella cartella `~/Library/Keyboard Layouts/`. Se la cartella non esiste, createla. Da terminale:
+   ```bash
+   mkdir -p ~/Library/Keyboard\ Layouts
+   cp "Italian (US keyboard with Italian Letters).keylayout" ~/Library/Keyboard\ Layouts/
+   ```
+3. Fate il logout e il login (oppure riavviate il Mac (consigliabile))
+4. Aprite Impostazioni di Sistema > Tastiera > Sorgenti di input > Modifica
+5. Premete il `+` in basso a sinistra, scorrete fino alla sezione "Altre" e selezionate `Italian (US keyboard with Italian Letters)`
+6. Eliminate la vecchia tastiera selezionandola e premendo il `-`
+7. Dalla barra dei menu in alto a destra, selezionate il nuovo layout
 
-# Compilazione manuale
+> **Nota:** su macOS, il tasto **Option (⌥)** sostituisce **ALTGR**. Il tasto **Command (⌘)** conserva tutte le scorciatoie di sistema (⌘C, ⌘V, ⌘Z, ecc.).
+
+# Compilazione manuale (Windows)
 Non dovreste mai fidarvi degli eseguibili su internet, anche se sono su GitHub.
 Per compilare questo layout:
 1. Clonate la repository
@@ -54,4 +71,4 @@ Per compilare questo layout:
 3. Aprite Layout Creator, premete su File > Load Source File
 4. Scegliete il file `.klc` della repository
 5. Andate su Project > Build DLL and Setup Package
-6. Aprite la cartella creata e avrete il vostro `setup.exe`, potete seguire il [resto dell'installazione](#installazione) saltando il primo passaggio
+6. Aprite la cartella creata e avrete il vostro `setup.exe`, potete seguire il [resto dell'installazione](#installazione-su-windows) saltando il primo passaggio
